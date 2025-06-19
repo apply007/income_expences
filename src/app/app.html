@@ -1,2 +1,5 @@
-<h1>App</h1>
-<button mat-raised-button>Submit</button>
+<page-header (onMenuClicked)="menuClicked=!menuClicked" />
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="menuClicked"><sidenav /></mat-drawer>
+  <main><router-outlet /></main>
+</mat-drawer-container>
